@@ -8,15 +8,15 @@
 <div class="border">
     <p th:text="${moji}"></p>
     <p th:text="${datetime}"><p>
-    <p th:text="${#dates.format(new java.util.Date(),'dd/MM/yyyy HH:mm')}"></p>
 </div>
 <form th:action="@{/greeting}" method="post">
 <select name="countryName">
     <option value="japan">日本</option>
     <option value="us">アメリカ</option>
     <option value="korean">韓国</option>
+    <option value="china">中国</option>
 </select>
-    <input type="submit" value="Submit" />
+    <input type="submit" value="送信" />
 </form>
 </body>
 </html>

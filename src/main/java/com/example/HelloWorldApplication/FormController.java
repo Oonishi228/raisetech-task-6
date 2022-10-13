@@ -12,7 +12,7 @@ public class FormController {
 
     @GetMapping("/form")
     public String init(Model model) {
-        model.addAttribute("moji", "hello world!");
+        model.addAttribute("moji", "Hello World!");
         //指定された名前に指定された属性を追加する。
 
         String now = LocalDateTime.now().format( DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH時mm分ss秒 E曜日")); // ②
@@ -33,6 +33,9 @@ public class FormController {
                 break;
             case "korean":
                 countryGreeting = "안녕하세요！";
+                break;
+            case "china":
+                countryGreeting = "你好！";
                 break;
         }
         model.addAttribute("countryGreeting", countryGreeting);
