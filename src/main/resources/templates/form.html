@@ -1,0 +1,22 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Form Sample</title>
+</head>
+<body>
+<div class="border">
+    <p th:text="${moji}"></p>
+    <p th:text="${datetime}"><p>
+    <p th:text="${#dates.format(new java.util.Date(),'dd/MM/yyyy HH:mm')}"></p>
+</div>
+<form th:action="@{/greeting}" method="post">
+<select name="countryName">
+    <option value="japan">日本</option>
+    <option value="us">アメリカ</option>
+    <option value="korean">韓国</option>
+</select>
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
