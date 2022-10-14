@@ -35,7 +35,7 @@ public class FormController {
 
             case "china" -> "你好！";
 
-            default -> "エラーです。";
+            default -> "こんにちは！";
 
         };
         model.addAttribute("countryGreeting", countryGreeting);
